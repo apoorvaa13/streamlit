@@ -25,7 +25,7 @@ if 'input_counter' not in st.session_state:
 st.title("Personality-Based Chatbot Evaluation")
 
 # Display conversation history
-for line in st.session_state.history[1:]:
+for line in st.session_state.history[5:]:
     st.write(line)
 
 # Create a placeholder for user input and submit button
