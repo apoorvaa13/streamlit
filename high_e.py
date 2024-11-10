@@ -12,7 +12,8 @@ model = genai.GenerativeModel("gemini-1.5-flash")
 
 # Initialize conversation history and counter in session state if they don't exist
 if 'history' not in st.session_state:
-    st.session_state.history = ["Engage in a lively, friendly tone, and encourage interaction. Use expressive language and ask follow-up questions to keep the conversation engaging. Display enthusiasm and positivity. “If you're deciding on a cuisine for your next meal, which would you choose? Italian or Chinese”"]
+    st.session_state.history = ["Engage in a lively, friendly tone, and encourage interaction. Use expressive language and ask follow-up questions to keep the conversation engaging. Display enthusiasm and positivity."]
+    st.session_state.history.append("“If you're deciding on a cuisine for your next meal, which would you choose? Italian or Chinese”")
 
 if 'input_counter' not in st.session_state:
     st.session_state.input_counter = 0 
