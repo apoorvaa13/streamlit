@@ -12,7 +12,8 @@ model = genai.GenerativeModel("gemini-1.5-flash")
 
 # Initialize conversation history and counter in session state if they don't exist
 if 'history' not in st.session_state:
-    st.session_state.history = ["Be very detail-oriented and thorough in your responses. Offer structured advice and extensive information on each topic. Use a professional tone, showing a strong commitment to helping the user. If you're trying to decide whether to read a book digitally on your tablet or get a physical copy, What do you think would be better?"]
+    st.session_state.history = ["Be very detail-oriented and thorough in your responses. Offer structured advice and extensive information on each topic. Use a professional tone, showing a strong commitment to helping the user."]
+    st.session_state.history.append("If you're trying to decide whether to read a book digitally on your tablet or get a physical copy, What do you think would be better?")
 
 if 'input_counter' not in st.session_state:
     st.session_state.input_counter = 0 
